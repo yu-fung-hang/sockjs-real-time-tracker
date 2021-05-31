@@ -1,0 +1,7 @@
+### get vehicle 100
+GET http://localhost:8080/api/gps/100
+
+### get vehicle 101
+GET http://localhost:8080/api/gps/101
+
+###

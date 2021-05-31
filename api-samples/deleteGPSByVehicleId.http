@@ -1,0 +1,7 @@
+### Delete vehicle 100
+DELETE http://localhost:8080/api/gps/100
+
+### Delete vehicle 101
+DELETE http://localhost:8080/api/gps/101
+
+###

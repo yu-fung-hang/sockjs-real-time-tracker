@@ -1,0 +1,21 @@
+### Add or update vehicle 100
+POST http://localhost:8080/api/gps
+Content-Type: application/json
+
+{
+  "vehicleId": 100,
+  "lng": 100.68,
+  "lat": 45.22
+}
+
+### Add or update vehicle 101
+POST http://localhost:8080/api/gps
+Content-Type: application/json
+
+{
+  "vehicleId": 101,
+  "lng": 123.12,
+  "lat": 50.33
+}
+
+###
