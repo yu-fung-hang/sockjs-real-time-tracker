@@ -18,7 +18,7 @@ It is a SockJS template that fetches data from MongoDB at regular intervals.
 1. Create a new MongoDB user. For convenience, you can refer to the next section [Steps to create a new MongoDB user](#steps-to-create-a-new-mongodb-user).
 2. Clone this project in IntelliJ IDEA.
 3. Edit `\src\main\resources\application.properties`: replace `spring.data.mongodb.username`, `spring.data.mongodb.password`, `spring.data.mongodb.database` and `spring.data.mongodb.authentication-database` with your own ones.
-4. Run `\src\main\java\com\singfung\tracker\SockjsRealTimeTrackerApplication.java`.
+4. Run `\src\main\java\com\singfung\tracker\SockJSRealTimeTrackerApplication.java`.
 5. Add some samples to MongoDB by running `\api-samples\saveGPS.http`. It adds the GPS information of two vehicles into MongoDB (`v100` and `v101`).
 6. Open three tabs in a browser(`http://localhost:8080/v100.html`, `http://localhost:8080/v101.html` and `http://localhost:8080/v102.html`). For each tab:
     1. Click `Connect` to build SockJS connection;

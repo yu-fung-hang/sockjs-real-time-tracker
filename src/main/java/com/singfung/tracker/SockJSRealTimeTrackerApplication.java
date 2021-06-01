@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SockjsRealTimeTrackerApplication {
+public class SockJSRealTimeTrackerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SockjsRealTimeTrackerApplication.class, args);
+        SpringApplication.run(SockJSRealTimeTrackerApplication.class, args);
     }
 
 }
