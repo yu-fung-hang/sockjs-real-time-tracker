@@ -17,11 +17,12 @@
         <div class="col-md-6">
             <form class="form-inline">
                 <div class="form-group">
-                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button> &nbsp;&nbsp;&nbsp;
                     <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect</button>
                 </div>
             </form>
         </div>
+        <!--
         <div class="col-md-6">
             <form class="form-inline">
                 <div class="form-group">
@@ -31,6 +32,7 @@
                 <button id="send" class="btn btn-default" type="submit">Send</button>
             </form>
         </div>
+        -->
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -77,7 +79,6 @@
     }
 
     function disconnect() {
-        stompClient.send("/app/end", {}, JSON.stringify({'vehicleId': vehicleId}));
         if (stompClient !== null) {
             stompClient.disconnect();
         }
@@ -85,9 +86,9 @@
         console.log("Disconnected");
     }
 
-    function sendName() {
-        stompClient.send("/app/track", {}, JSON.stringify({'vehicleId': vehicleId}));
-    }
+    // function sendName() {
+    //     stompClient.send("/app/track", {}, JSON.stringify({'vehicleId': vehicleId}));
+    // }
 
     function showGreeting(message) {
         $("#greetings").append("<tr><td>" + message + "</td></tr>");
