@@ -27,19 +27,19 @@ public class GPSService
     {
         String vehicleId = gps.getVehicleId();
 
-        if(vehicleId == null || vehicleId.length()==0)
+        if(vehicleId == null || vehicleId.length() == 0)
         { throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "vehicleId could not be null!"); }
 
         Query query = Query.query(Criteria.where("vehicleId").is(vehicleId));
         List<GPS> gpsList = mongoTemplate.find(query, GPS.class);
 
-        //insert
-        if(gpsList.size()==0)
+        // insert
+        if(gpsList.size() == 0)
         {
             gps = mongoTemplate.insert(gps);
             if (gps == null)
             { throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Failed. Please contact the system administrator."); }
-        } else { //update
+        } else { // update
             query = Query.query(Criteria.where("vehicleId").is(gps.getVehicleId()));
             Update update = new Update();
             update.set("lat", gps.getLat());
