@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/gps")
 public class GPSController
 {
-    private GPSService GPSService;
+    private GPSService gpsService;
 
     @Autowired
-    public GPSController(GPSService GPSService)
-    { this.GPSService = GPSService; }
+    public GPSController(GPSService gpsService)
+    { this.gpsService = gpsService; }
 
     //insert or update
     @PostMapping()
     public void saveGPS(@RequestBody GPS gps)
-    { GPSService.saveGPS(gps); }
+    { gpsService.saveGPS(gps); }
 
     @GetMapping("/{vehicleId}")
     public GPS getGPSByVehicleId(@PathVariable String vehicleId)
-    { return GPSService.getGPSByVehicleId(vehicleId); }
+    { return gpsService.getGPSByVehicleId(vehicleId); }
 
     @DeleteMapping("/{vehicleId}")
     public void deleteGPS(@PathVariable String vehicleId)
-    { GPSService.deleteGPS(vehicleId); }
+    { gpsService.deleteGPS(vehicleId); }
 }
