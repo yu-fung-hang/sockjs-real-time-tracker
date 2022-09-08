@@ -52,7 +52,7 @@ public class WebSocketController
 
             GPSTimerTask gpsTimerTask = new GPSTimerTask(this.gpsService, this.template, temp[2]);
             gpsTimerTaskMap.put(sessionId, gpsTimerTask);
-            this.timer.scheduleAtFixedRate(gpsTimerTask, 0, 1000);
+            this.timer.scheduleAtFixedRate(gpsTimerTask, 0, 1500);
         }
     }
 
